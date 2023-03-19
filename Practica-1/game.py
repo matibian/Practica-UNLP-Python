@@ -5,6 +5,7 @@ operators = ["+", "-", "*", "/"]
 # Cantidad de cuentas a resolver
 times = 5
 correct = 0
+incorrect = 0
 # Contador inicial de tiempo.
 # Esto toma la fecha y hora actual.
 
@@ -30,6 +31,7 @@ for i in range(0, times):
         correct += 1
     else:   
         print(f"Incorrecto. El resultado  correcto es: { res }")
+        incorrect += 1
 
 
 # Al terminar toda la cantidad de cuentas por resolver.
@@ -38,4 +40,4 @@ end_time = datetime.now()
 # Restando las fechas obtenemos el tiempo transcurrido.
 total_time = end_time - init_time
 # Mostramos ese tiempo en segundos.
-print(f"\n Tardaste {total_time.seconds} segundos. Tenés {correct} respuestas correctas")
+print(f"\n Tardaste {total_time.seconds} segundos. Tenés {correct} respuestas correctas y {incorrect} incorrectas")
